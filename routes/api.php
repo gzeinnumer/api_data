@@ -20,3 +20,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 use App\Http\Controllers\DataController;
 Route::get('/data', [DataController::class, 'index']);
+Route::post('/data/store', [DataController::class, 'store']);
+Route::post('/data/update/{id}', [DataController::class, 'update']);
+Route::get('/data/delete/{id}', [DataController::class, 'delete']);
+Route::get('/data/getDataById/{id}', [DataController::class, 'getDataById']);
+Route::get('/data/query/{id}', [DataController::class, 'query']);
+
+//api.php rute yang return json
